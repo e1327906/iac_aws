@@ -1,2 +1,2 @@
 environment = "prod"
-project     = "qrts"
+project     = "sqrts"
