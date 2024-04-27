@@ -19,16 +19,9 @@ provider "aws" {
   region  = "ap-southeast-1" # AWS region
 }
 
-
-variable "create_bucket" {
-  description = "Set to true if you want to create the S3 bucket, false otherwise."
-  type        = bool
-  default     = false
-}
-
 # Create S3 bucket for Python Flask app
 resource "aws_s3_bucket" "eb_bucket" {
-  count = var.create_bucket ? 1 : 0
+  count =  0
   bucket = "eb-qrts-app" # Name of S3 bucket to create for Flask app deployment needs to be unique 
 }
 
