@@ -50,7 +50,7 @@ resource "aws_elastic_beanstalk_application_version" "eb_app_ver" {
 resource "aws_elastic_beanstalk_environment" "tfenv" {
   name                = "eb-qrts-app-env"
   application         = aws_elastic_beanstalk_application.eb_app.name             # Elastic Beanstalk application name
-  solution_stack_name = "64bit Amazon Linux 2 v3.5.0 running Corretto 17"         # Define current version of the platform
+  solution_stack_name = "corretto-java-17"         # Define current version of the platform
   description         = "environment for qrts app"                               # Define environment description
   version_label       = aws_elastic_beanstalk_application_version.eb_app_ver.name # Define version label
 
