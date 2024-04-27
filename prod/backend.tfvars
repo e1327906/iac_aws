@@ -1,3 +1,3 @@
 bucket = "enes-mybucket"
 key    = "path/to/my/key"
-region = "us-east-2"
+region = "ap-southeast-1"

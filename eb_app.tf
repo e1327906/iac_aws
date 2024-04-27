@@ -9,14 +9,14 @@ terraform {
   backend "s3" {
     bucket = "enes-mybucket"  # S3 bucket name
     key    = "path/to/my/key" # S3 key name
-    region = "us-east-2"      # S3 region
+    region = "ap-southeast-1"      # S3 region
   }
 }
 
 # AWS Provider configuration
 provider "aws" {
   profile = "default"   # AWS profile 
-  region  = "us-east-2" # AWS region
+  region  = "ap-southeast-1" # AWS region
 }
 
 # Create S3 bucket for Python Flask app
