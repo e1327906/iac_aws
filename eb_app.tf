@@ -7,7 +7,7 @@ terraform {
   }
 
   backend "s3" {
-    bucket = "app-bucket"  # S3 bucket name
+    bucket = "eb-qrts-app"  # S3 bucket name
     key    = "path/to/my/key" # S3 key name
     region = "ap-southeast-1"      # S3 region
   }

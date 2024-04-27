@@ -75,7 +75,7 @@ You need store your Terraform state in S3 bucket that you created previously. S3
 ```
 bucket = "enes-mybucket"
 key    = "path/to/my/key"
-region = "us-east-2"
+region = "ap-southeast-1"
 ```
 
 Storing your Terraform state in S3 bucket helps you to manage your Terraform operations. For example, you can backup your Terraform state before you destroy your infrastructure. And you can destroy your whole infrastructure when you need to. So when you try to destroy your infrastructure, Terraform will check if the state file exists in the S3 bucket. If the state file exists, Terraform will destroy your infrastructure that you created before with `Terraform Apply` command (Even if you build your infrastructure automatically committing with GitHub Actions).
