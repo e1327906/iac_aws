@@ -20,10 +20,9 @@ provider "aws" {
 }
 
 # Create S3 bucket for Python Flask app
-resource "aws_s3_bucket" "eb_bucket" {
-  count =  0
-  bucket = "eb-qrts-app" # Name of S3 bucket to create for Flask app deployment needs to be unique 
-}
+#resource "aws_s3_bucket" "eb_bucket" {
+  #bucket = "eb-qrts-app" # Name of S3 bucket to create for Flask app deployment needs to be unique 
+#}
 
 # Define App files to be uploaded to S3
 #resource "aws_s3_bucket_object" "eb_bucket_obj" {
@@ -40,7 +39,8 @@ resource "aws_elastic_beanstalk_application" "eb_app" {
 
 # Create Elastic Beanstalk environment for application with defining environment settings
 resource "aws_elastic_beanstalk_application_version" "eb_app_ver" {
-  bucket      = aws_s3_bucket.eb_bucket.id                    # S3 bucket name
+  bucket = "eb-qrts-app"
+  #bucket      = aws_s3_bucket.eb_bucket.id                    # S3 bucket name
   #key         = aws_s3_bucket_object.eb_bucket_obj.id         # S3 key path 
   key         = "beanstalk/tg_query_api.jar"         # S3 key path 
   application = aws_elastic_beanstalk_application.eb_app.name # Elastic Beanstalk application name
