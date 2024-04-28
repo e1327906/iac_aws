@@ -63,7 +63,7 @@ resource "aws_elastic_beanstalk_environment" "tfenv" {
   setting {
     namespace = "aws:elasticbeanstalk:application:environment"
     name      = "RDS_HOSTNAME"
-    value     = "database-1.c7qq28y8u55e.ap-southeast-1.rds.amazonaws.com"
+    value     = "qrtsrds.c7qq28y8u55e.ap-southeast-1.rds.amazonaws.com"
   }
 
   setting {
