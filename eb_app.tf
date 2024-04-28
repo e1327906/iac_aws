@@ -44,7 +44,7 @@ resource "aws_elastic_beanstalk_application_version" "eb_app_ver" {
   #key         = aws_s3_bucket_object.eb_bucket_obj.id         # S3 key path 
   key         = "beanstalk/tg_query_api.jar"         # S3 key path 
   application = aws_elastic_beanstalk_application.eb_app.name # Elastic Beanstalk application name
-  name        = "eb-qrts-app-version-lable"                # Version label for Elastic Beanstalk application
+  name        = "v.1.0.0"                # Version label for Elastic Beanstalk application
 }
 
 resource "aws_elastic_beanstalk_environment" "tfenv" {
